@@ -14,4 +14,4 @@ For example, if you want to make your own **Aquarius<sup>+</sup> Mini**, you wou
  * Release notes and other instructions in TXT format
 
 ## Development
-If however you want to explore how the **Aquarius<sup>+</sup> Mini** is designed using KiCAD, you would need to Clone or Fork this repo to your local system. From there you can review and experiment with the schematic, PCB, and other files within the KiCAD environment.
+If you want to explore how the **Aquarius<sup>+</sup> Mini** is designed using KiCAD, you will need to Clone or Fork this repo to your local system. From there you can review and experiment with the schematic, PCB, and other files within the KiCAD environment.
