@@ -32,7 +32,30 @@ If you want to explore how the **Aquarius<sup>+</sup>** is designed using KiCAD,
 ### Process
 This guide assumes that the maker will be having a third-party manufacturer create and assemble the PCB. It does not cover user-manufactered PCBs or assembly using a reflow oven or other manual tasks.
 
-#### **PCBWay** (Easiest)
+#### **JLCPCB** (Cheapest)
+1. **Order the parts**
+    - On the [JLCPCB](https://jlcpcb.com) main site, log in and go to Parts Manager, then Order Parts, then JLCPCB Parts.
+    - From the JLCPCB Assembly Parts page, select BOM Tool.
+    - Upload the BOM file to the site. From the pop-up, select the number of PCBs you want to manufacture. This multiplies the quantities for you for each item.
+    - Add to cart, pay for items, and wait.
+    - Over the next several days, you will get email notifications as items arrive into your parts inventory. Sometimes, there will be an increase or decrease in the amount you paid, so JLCPCB will either ask you to pay the difference (part is more expensive than estimated) or they will credit your purchase (part was less expensive than estimated). Acknowledge these messages, pay the difference (as needed), and wait.
+    - Once all of the parts are in your inventory, proceed to the next step.
+3. **Order the assembled PCB**
+    - Log into JLCPCB, and start a new order.
+    - Upload the Gerber files.
+    - Mark the order as SMT Assembly.
+    - Upload the BOM and CPL files.
+    - Ensure there are sufficient quantities of the parts you need. If not, go back to [Order the parts](#JLCPCB) section.
+    - Review the placement of all parts. Note that some of the items (ESP32, switch) don't have a 3D model to go with their part, so a small 2x2 checkerboard is used. Don't worry about these items. The CPL1 file has been tuned to accurately place the components, so this step is for QA to make sure nothing has gone wrong.
+      - If you select a part (blue highlight), you can nudge it with the arrow keys. RIGHT nudges increase the X. LEFT nudges decrease the X. UP nudges increase the Y. DOWN nudges decrease the Y.
+      - For THT parts, it's easier to align the parts from the BOTTOM view, but remember that your X axis is now flipped, so a RIGHT nudge decreases the X and a LEFT nudge increases it.
+      - Each "nudge" is a difference of 0.0635mm, and can be added or subtracted from the CPL file accordingly... i.e. if you nudge a part UP (increase y axis) five times, you're modifying it 5 x 0.0635mm or 3.175. So if it's value in the CPL file is -45.025, the new value should be -44.7075.
+    - JLCPCB will automatically set the "confirm PCB" and "confirm placement" options, and let you know that there will be a small charge for this.
+    - Add to cart, pay for items, and wait.
+    - You will get at least two emails. The first will be to confirm your PCB file. This is done in your Order History window. Confirm it. The second email will be to confirm the layout of the components. In your Order History window, the lower Confirm Placement button brings a pop-up which shows the placement of the SMT parts (THT or throughhole is done separately). Everything should be fine, but reply to the email and ask to see a 3D of the cartridge port placement. This will take a day or so, but so long as the port is shown in the far right columns of pins, you can confirm placement.
+    - Check the progress of your order daily to make sure there's nothing you need to confirm. Once the product has shipped, you can move onto Assembly.
+
+#### **PCBWay** (PROCESS IN DEVELOPMENT)
 1. **Order the assembled PCBs**
     - Visit the PCBWay Aquarius+ Shared Project page for the version you want to manufacture.
 	    - [Aquarius+ Standard](https://www.pcbway.com/project/shareproject/Aquarius_Computer_Standard_PCB_0087c6b7.html) 
@@ -69,29 +92,6 @@ This guide assumes that the maker will be having a third-party manufacturer crea
 	- You should visually inspect the PCBs once you get them. Make sure all parts are properly installed and soldered in place.
 	- Continue onto the Assembly section below.
 
-#### **JLCPCB** (Cheapest)
-1. **Order the parts**
-    - On the [JLCPCB](https://jlcpcb.com) main site, log in and go to Parts Manager, then Order Parts, then JLCPCB Parts.
-    - From the JLCPCB Assembly Parts page, select BOM Tool.
-    - Upload the BOM file to the site. From the pop-up, select the number of PCBs you want to manufacture. This multiplies the quantities for you for each item.
-    - Add to cart, pay for items, and wait.
-    - Over the next several days, you will get email notifications as items arrive into your parts inventory. Sometimes, there will be an increase or decrease in the amount you paid, so JLCPCB will either ask you to pay the difference (part is more expensive than estimated) or they will credit your purchase (part was less expensive than estimated). Acknowledge these messages, pay the difference (as needed), and wait.
-    - Once all of the parts are in your inventory, proceed to the next step.
-3. **Order the assembled PCB**
-    - Log into JLCPCB, and start a new order.
-    - Upload the Gerber files.
-    - Mark the order as SMT Assembly.
-    - Upload the BOM and CPL files.
-    - Ensure there are sufficient quantities of the parts you need. If not, go back to Order the parts section.
-    - Review the placement of all parts. Note that some of the items (ESP32, switch, Z80, expansion port) don't have a 3D model to go with their part, so a small 2x2 checkerboard is used. Don't worry about these items. The CPL1 file has been tuned to accurately place the components, so this step is for QA to make sure nothing has gone wrong.
-      - If you select a part (blue highlight), you can nudge it with the arrow keys. RIGHT nudges increase the X. LEFT nudges decrease the X. UP nudges increase the Y. DOWN nudges decrease the Y.
-      - For THT parts, it's easier to align the parts from the BOTTOM view, but remember that your X axis is now flipped, so a RIGHT nudge decreases the X and a LEFT nudge increases it.
-      - Each "nudge" is a difference of 0.0635mm, and can be added or subtracted from the CPL file accordingly... i.e. if you nudge a part UP (increase y axis) five times, you're modifying it 5 x 0.0635mm or 3.175. So if it's value in the CPL file is -45.025, the new value should be -44.7075.
-    - JLCPCB will automatically set the "confirm PCB" and "confirm placement" options, and let you know that there will be a small charge for this.
-    - Add to cart, pay for items, and wait.
-    - You will get at least two emails. The first will be to confirm your PCB file. This is done in your Order History window. Confirm it. The second email will be to confirm the layout of the components. In your Order History window, the lower Confirm Placement button brings a pop-up which shows the placement of the SMT parts (THT or throughhole is done separately). Everything should be fine, but reply to the email and ask to see a 3D of the cartridge port placement. This will take a day or so, but so long as the port is shown in the far right columns of pins, you can confirm placement.
-    - Check the progress of your order daily to make sure there's nothing you need to confirm. Once the product has shipped, you can move onto Assembly.
-	
 #### Assembling the Aquarius+
  - Make sure your shipment package has no obvious damage. If it does, take pictures before you open the box and save them for later. Most of the time, a ding or puncture will not be a problem, as the contents are typically very well wrapped.
  - There are sometimes small beads or blobs of solder that get deposited on the top of the board. With a magnifier, check ALL components to ensure there are no obvious solder blobs or bridges on the components, both SMT and THT. Now, check the BACK side of the board to ensure all THT components have solid, well-tented solder joints. Check the metal shrouds around the USB, controllers (DB9), VGA, power switch, and SD card socket to remove any accidental blobs or splashes. They should pop free with minimal force.
