@@ -18,19 +18,21 @@ The **Source code (zip)** or **Source code (tar.gz)** payload will consist of th
 ## Development
 If you want to explore how the **Aquarius<sup>+</sup>** is designed using KiCAD, you will need to Clone or Fork this repo to your local system. From there you can review and experiment with the schematic, PCB, and other files within the KiCAD environment.
 
+****
+
 ## PCB Manufacturing
 
-### PCB Terms:
+### PCB Terms
  - BOM - Bill of Materials
  - CPL - Component Placement Layout/List (sometimes referred to as CPL1)
  - PCB - Printed Circuit Board
  - SMT - Surface mount (sometimes referred to as SMD)
  - THT - Through hole
 
-### Process:
+### Process
 This guide assumes that the maker will be having a third-party manufacturer create and assemble the PCB. It does not cover user-manufactered PCBs or assembly using a reflow oven or other manual tasks.
 
-#### **PCBWay:** (Easiest)
+#### **PCBWay** (Easiest)
 1. **Order the assembled PCBs**
     - Visit the PCBWay Aquarius+ Shared Project page for the version you want to manufacture.
 	    - [Aquarius+ Standard](https://www.pcbway.com/project/shareproject/Aquarius_Computer_Standard_PCB_0087c6b7.html) 
@@ -67,7 +69,7 @@ This guide assumes that the maker will be having a third-party manufacturer crea
 	- You should visually inspect the PCBs once you get them. Make sure all parts are properly installed and soldered in place.
 	- Continue onto the Assembly section below.
 
-#### **JLCPCB:** (Cheapest)
+#### **JLCPCB** (Cheapest)
 1. **Order the parts**
     - On the [JLCPCB](https://jlcpcb.com) main site, log in and go to Parts Manager, then Order Parts, then JLCPCB Parts.
     - From the JLCPCB Assembly Parts page, select BOM Tool.
