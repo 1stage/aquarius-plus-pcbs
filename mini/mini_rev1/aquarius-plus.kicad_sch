@@ -5,8 +5,8 @@
 	(uuid "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55")
 	(paper "A3")
 	(title_block
-		(title "Aquarius+ mini vZ80")
-		(date "2024-08-30")
+		(title "Aquarius+ Mini vZ")
+		(date "2024-11-27")
 		(rev "1")
 		(company "Designed by Frank van den Hoef")
 		(comment 1 "Drawing by Sean P. Harrington")
