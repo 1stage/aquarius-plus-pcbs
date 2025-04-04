@@ -2,7 +2,14 @@
 A reduced-cost, small form factor version of the **Aqaurius<sup>+</sup>**, designed as an entry point for 8-bit enthusiasts who want physical hardware.
 
 ## Introduction
-The **Aqaurius<sup>+</sup> Mini** retains all of the components relevant to enjoying the platform, but removes legacy hardware components that are more specific to collectors of original **Aqaurius Computer** such as the cartridge and cassette ports.
+The **Aqaurius<sup>+</sup> Mini** retains all of the components relevant to enjoying the platform, but removes legacy hardware components that are more specific to collectors of original **Aqaurius Computer** such as the cartridge and cassette ports. In November of 2024, the **Aqaurius<sup>+</sup> Mini vZ** was introduced - "vZ" stands for Virtual Z80 - removing the physical Z80 chip and moving it into the FPGA along with the virtualized AY sound chips and the logic from the original PLA1 and PLA2 from the original **Aqaurius Computer** architecture.
+
+## PCB Revisions
+ * **rev1** (aka Mini vZ) - Current release platform
+   * Introduced: 22 NOV 2024
+ * **rev0** - Z80-based hardware
+   * Retired: 22 NOV 2024
+   * Introduced: 24 FEB 2024
 
 ## Platform Comparison
 | Feature | Aq<sup>+</sup> Mini | Aq<sup>+</sup> Standard |
@@ -21,3 +28,4 @@ The **Aqaurius<sup>+</sup> Mini** retains all of the components relevant to enjo
 | Wired Hand Controller Ports | :x: | ✅ |
 
 *As of **rev1**, the **Aqaurius<sup>+</sup> Mini** no longer relies on a physical Z80 CPU to function, moving it instead into the FPGA.
+
