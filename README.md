@@ -1,5 +1,5 @@
 # Aquarius<sup>+</sup> PCBs
-Development of PCBs for the **Aquarius<sup>+</sup>** platform
+Development of PCBs (Printed Circuit Boards) for the **Aquarius<sup>+</sup>** platform
 
 ## Introduction
 The **Aquarius<sup>+</sup>** was developed as an open-source platform, including the hardware that comprises the system. To accomplish this and to make tools for the development and manufacture of the platform as accessible as possible, [KiCAD](https://github.com/KiCad/kicad-source-mirror) is used for PCB development, as it is a free, open source tool that has anyone can learn and use.
